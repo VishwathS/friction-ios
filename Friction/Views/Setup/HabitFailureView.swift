@@ -56,9 +56,11 @@ struct HabitFailureView: View {
 
             Spacer()
 
-            Button("Next") {
-                print("Failure tags:", habit.failureTags)
-                print("Failure notes:", habit.failureNotes)
+            NavigationLink {
+                PrepView()
+            } label: {
+                Text("Next")
+                    .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
         }
